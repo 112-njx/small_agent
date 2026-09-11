@@ -2,7 +2,7 @@
 从零实现一个最小可用 Agent
 要求1：从零完成
 不能依赖现有agent框架（langgraph/openhands/openclaw/PI）完成主流程，
-允许使用任何 AI 工具辅助开发，但核心 Agent Runtime 需要自行实现。
+允许使用任何 AI 工具辅助开发，包括核心Agent Runtime。
 
 要求2：实现基本循环
 Loop大致步骤
@@ -13,7 +13,7 @@ Step four 根据工具结果判断是继续loop，还是返回结果给用户
 工具相关
 至少实现三个工具
 calculator
-search（可 mock）
+search（mock）
 read_docs / todo / weather（可自定义）
 
 需实现工具注册机制（每个工具包含名称、描述、参数 Schema），LLM 基于 Schema 自主决策调用。需实现 LLM 输出的解析逻辑，提取思考过程、工具调用或最终答案。
@@ -41,4 +41,4 @@ context过长要有基础的压缩，复杂的压缩不用在这里实现。
 需要使用真实的LLM Api
 代码链接（github即可）
 README（运行方式、系统设计、memory 的召回时机与放置方式说明）
-AI Prompt 与问题解决记录
+问题解决记录
