@@ -174,7 +174,7 @@ CLI 负责把三者组装起来。
 - 补齐集成 / 端到端测试用例，逐项覆盖 readme「要求 3」全部功能点：
   loop 流转、工具决策、session 隔离、context 压缩、异常处理、trace 日志
 - 重写 `README.md`：运行方式、系统设计、**memory 的召回时机与放置方式**说明
-- 交付 `AI Prompt 与问题解决记录`（写入 `docs/`，如 `docs/ai-prompts.md`，
+- 交付 `AI Prompt 与问题解决记录`（写入 `docs/prompt.md`，
   并同步完善 `docs/bug.md`、`docs/code.md`）
 - 最终自查：`pytest` 全绿；按 README 在全新环境可跑通
 
