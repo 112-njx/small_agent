@@ -15,7 +15,7 @@
 
 1. **`agent/core/messages.py`**：`Message` 数据模型（role / content / tool_calls / tool_call_id / name 等）。
    ⚠️ **契约冻结点**：该模型将被 Step 3（工具 Schema）、Step 4（主循环）、Step 5（会话/上下文）依赖，字段按 **OpenAI 兼容格式**设计（assistant 可携带 tool_calls；tool 消息带 tool_call_id；arguments 为 JSON 字符串），命名保持稳定。
-2. **`agent/llm/client.py`**：`LLMClient` 调用真实 OpenAI 兼容 API（openai SDK，chat.completions + tools 参数）；配置从 `load_config()` 的 `Settings` 读取；支持超时与指数退避重试；调用失败抛 `LLMError`。
+2. **`agent/llm/client.py`**：`LLMClient` 调用真实 deepseek 兼容 API（SDK，tools 参数等）；配置从 `load_config()` 的 `Settings` 读取；支持超时与指数退避重试；调用失败抛 `LLMError`。
 3. **`agent/llm/parser.py`**：`Parser` 输出解析——
    - 原生 function calling 响应（tool_calls 字段）
    - 文本内 JSON 兜底（如 ```json 代码块）
